@@ -1,0 +1,40 @@
+import java.util.*;
+
+class Employee
+{
+    String eid;
+    String ename;
+    String eprojects[];
+
+
+//Define all the required methods here
+
+public Employee(String id, String name, String[] proj) 
+{
+	this.eid = id;
+	this.ename = name;
+	this.eprojects = proj;
+}
+
+public Employee(Employee obj) {
+	this.eid = obj.eid;
+	this.ename = obj.ename;
+	this.eprojects = obj.eprojects.clone();
+	
+}
+
+public void display() {
+	String joinedProjects = String.join(":", this.eprojects);
+	System.out.println("id:"+this.eid);
+	System.out.println("name:"+this.ename);
+	System.out.println("projects:"+joinedProjects+":");
+}
+
+//Define all the required methods here
+public void mutator()
+{
+    this.ename = "Mr "+ this.ename;
+    this.eprojects[0] = null;
+}
+
+}

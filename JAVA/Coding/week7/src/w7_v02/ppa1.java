@@ -1,0 +1,88 @@
+package w7_v02;
+
+import java.util.*;
+
+
+
+
+
+//Define class WrongDestinationException
+
+class WrongDestinationException extends Exception{
+	public WrongDestinationException() {	
+	super("Invalid destination");
+	}
+
+}
+
+//Define class ImproperHeadCountException
+class ImproperHeadCountException extends Exception{
+	public ImproperHeadCountException() {	
+		super("Head count should be positive non zero value");
+		}
+		
+}
+
+class CarRental{
+int passenger_count;
+String chosen_destination;
+HashMap<String,Double> available_destinations;  
+	
+public CarRental(int pc, String dest) {
+    passenger_count = pc;
+    chosen_destination = dest;
+    //preassigned destinations and total car fare
+    //Leave the code below as it is
+    available_destinations = new HashMap<String,Double>();
+    available_destinations.put("Marina Beach", 2000.0);
+    available_destinations.put("Elliot's Beach", 5000.0);
+    available_destinations.put("Film City", 8000.0);
+}
+public void carBooker() throws ImproperHeadCountException, WrongDestinationException{
+    //define this method according to the problem description
+	  
+	  try {
+	  if(this.passenger_count <=0) {
+		  throw new ImproperHeadCountException();
+	  }
+	  else if(this.available_destinations.getOrDefault(chosen_destination, null) == null) {
+		 throw new NullPointerException(); 
+	  }
+	  else {
+		  double cost_per_head = this.available_destinations.get(chosen_destination)/this.passenger_count;
+		  System.out.println("Destination: " + this.chosen_destination + ", Head cost: " + cost_per_head);	  
+		  }
+	  
+	  }
+	  catch(ImproperHeadCountException e){
+		  System.out.println(e);
+		  
+	  }
+	  catch(NullPointerException e){
+		  WrongDestinationException new_e = new WrongDestinationException();
+		  e.initCause(new_e);
+		  throw e;
+	  }
+
+	}
+}
+
+
+public class ppa1{
+    public static void main(String args[]){
+        Scanner s = new Scanner(System.in);
+        
+        int num = s.nextInt(); //input the number of car rental requests
+        try {
+            for(int i=1;i<=num;i++) {
+                int heads = s.nextInt(); //enter head count
+                s.nextLine();  //enter destination
+                String dest = s.nextLine();     
+                CarRental obj = new CarRental(heads,dest);
+                obj.carBooker();
+            }
+        }catch(Exception e) {
+            System.out.println(e.getCause());
+        }
+    }
+}

@@ -1,0 +1,13 @@
+Kunal
+Bikash
+1011101
+1022010
+30000.00
+50
+
+name : Kunal
+aadharno : 1011101
+salary : 30000.0
+name : Bikash
+aadharno : 1022010
+salary : 5000.0

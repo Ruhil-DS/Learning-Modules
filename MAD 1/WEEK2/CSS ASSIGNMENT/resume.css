@@ -1,0 +1,23 @@
+body{
+        background-color: #fdfdbb;
+    }
+div{
+   border: 20px
+    }
+a  {
+    color: #ff0000;
+   }
+
+span{
+    color: #0000ff;
+
+}
+
+
+#footer{
+    bottom: 0;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+}
+

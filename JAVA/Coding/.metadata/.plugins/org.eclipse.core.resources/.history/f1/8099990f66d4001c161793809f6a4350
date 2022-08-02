@@ -1,0 +1,20 @@
+class Employee{
+	    String ename;
+	    String eid;
+	    String edept;
+	    
+	    public Employee(){
+		        ename = "guest";
+	    }
+//Define the required methods
+	    
+	    public Employee(ename, eid, edept) {
+	    	this.ename = name;
+	    	this.eid = id;
+	    	this.edept = dept;
+	    }
+	    
+	    
+//Define the required methods
+	    
+}

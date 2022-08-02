@@ -1,0 +1,17 @@
+    table{
+        border: 2px solid black;
+        border-collapse: collapse;
+        text-align: center
+    }
+    td, th {
+        border: 2px solid black
+    }
+
+    thead{
+        background-color: greenyellow;
+    }
+    /*Now for alternative gray cell, we use thie following code*/
+    tr:nth-child(even){
+        background-color: lightgray;
+    }
+

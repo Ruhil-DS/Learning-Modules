@@ -1,0 +1,41 @@
+body{
+        background-color: #fdfdbb;
+    }
+div{
+   border: 20px
+    }
+a  {
+    color: #ff0000;
+   }
+
+span{
+    color: #0000ff;
+
+}
+
+h5, h1{
+    text-align: center;
+}
+
+td{
+    color: #ffffff;
+    border: 2px solid black;
+    background-color: #000000;
+    text-align: right;
+}
+th{
+    background-color: #259e3f;
+    border: 2px solid black;
+}
+table{
+    border: 2px solid black;
+    border-collapse: collapse;
+}
+
+#footer{
+    bottom: 0;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+}
+

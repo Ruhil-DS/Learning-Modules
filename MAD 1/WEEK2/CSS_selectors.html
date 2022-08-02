@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="Description" content="We are learning css"/>
+
+        <style type="text/css">
+            form  input[x='y']:hover{
+                background-color: cadetblue;
+
+            }
+            form  input[x='z']:hover{
+                background-color: #6a24b4;
+            }
+            form p::first-letter{
+                color: red;
+                font-size: 25px;
+                font-family: "American Typewriter";
+
+            }
+        </style>
+    </head>
+    <body>
+    <form>
+
+        <p class="name_para"> Enter the name</p>
+        <input type="text" x="z"/>
+
+        <div id="personal">
+            <p> Enter the age</p>
+            <input type="text" x="y"/>
+            Even this gets highlighted because of the id specific styling
+        </div>
+
+        <div id="official">
+            <p> Enter your roll number</p>
+            <input type="text" x="y" />
+        </div>
+    </form>
+
+    </body>
+</html>

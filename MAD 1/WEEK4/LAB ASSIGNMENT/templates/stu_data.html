@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>
+      Student Data
+    </title>
+  </head>
+  <body>
+    <h1>
+      Student Details
+    </h1>
+    <table border="2" id="student-details-table">
+      
+      <tr>
+        <th>
+          Student id
+        </th>
+        <th>
+          Course id
+        </th>
+        <th>
+          Marks
+        </th>
+      </tr>
+      {% for row in rows_stu %}
+      <tr>
+        <td>{{row[0]}}</td>
+        <td>{{row[1]}}</td>
+        <td>{{row[2]}}</td>
+      </tr>
+      {% endfor %}
+      <tr>
+        <td colspan="2" style="text-align:center">
+          Total Marks
+        </td>
+        <td>
+          {{tot_marks_stu}}
+        </td>
+      </tr>
+    </table>
+  <p> <a href={{url_for('main_code')}}>Go Back</a></p>
+  </body>
+</html>

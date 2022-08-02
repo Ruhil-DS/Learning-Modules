@@ -1,0 +1,9 @@
+
+class point
+{
+         public static void main(String[] args)
+         {
+        	 HelloWorld e1 = new HelloWorld();
+                e1.display();
+          }
+}

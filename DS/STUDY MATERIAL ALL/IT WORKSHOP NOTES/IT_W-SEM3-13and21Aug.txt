@@ -1,0 +1,196 @@
+things with underscore are considered as to edit the internal variable
+
+
+>>> 5
+
+ans = 5
+
+/* ans is a variable defined by default if not mentioned any other variable
+
+>>> 77
+
+ans = 77
+
+/* ans gets updated 
+
+
+
+
+
+>>> x = 5 ; y = 10
+
+
+# this way we can define multiple variables
+but only y = 10 will be displayed in the output
+
+
+soo ->
+
+b = 15 ;
+
+# we'll have no output
+
+--------
+
+
+
+DELETING A VARIABLE 
+
+>>>clear x
+>>>clear y
+
+OR SIMPLY ->
+>>> clear x; clear y
+
+>>> clear
+to clear all at once
+
+------
+
+who command can be used to show the defined variables
+whos command to show detailed defined variables
+
+
+
+>> matrixexample = [1 2 3; 4 5 10; 8 9 0]
+
+SQUARE BRACES
+
+# matrix making
+
+
+>> % this is a single line comment
+>> % { this is a milti line comment %} 
+
+NOTE -> MULTI LINE COMMENT WORKS IN EDITOR AND NOT IN COMMAND WINDOW
+
+
+-----
+
+
+ctrl + c  -> used to exit a loop we're stuck at
+
+clc -> clear screen
+
+help sqrt -> help of sqrt
+
+
+
+----------
+
+>> pi
+ans =  3.1416
+>> format long
+>> pi
+ans =  3.141592653589793
+>>
+
+
+
+
+
+>> format short
+>> pi
+ans =  3.1416
+>>
+
+
+
+
+
+>> format shorte
+>> pi
+ans =  3.1416e+00
+>>
+
+
+
+>> format bank
+>> pi
+ans =  3.14
+
+BANK FORMAT ^  
+    
+    
+
+    
+    
+    
+    
+>> format rat
+>> pi
+ans =  355/113
+>>
+
+FINDING RATIONAL APPROX
+
+
+---------
+
+>> rowVector = [1,2,3,4,5]
+rowVector =
+
+          1          2          3          4          5
+
+>>
+
+
+
+>> ClmnVector(3) 
+ans = 6
+>>
+GIVES THE 3RD VALUE
+
+
+>> rowVector(:)
+ans =
+
+          1
+          2
+          3
+          4
+          5
+          
+
+-----------
+
+>>ClmnVector = [1;2;3;4;5]
+ClmnVector =
+
+          
+          1
+          2
+          3
+          4
+          5
+
+
+>> matrix2 = [ rowVector ; ClmnVector]
+matrix2 =
+
+          1          2          3          4          5
+          1          2          6          3          2
+          
+          
+          
+          
+>> vectorAddition = [ xvector + yvector ]
+
+>>disp(xvector + yvector)
+
+DISPLAYS THE SUM
+
+
+>> disp(ROW)
+          2          4          9          7          7
+>> disp(ROW')
+          2
+          4
+          9
+          7
+          7
+
+
+          
+          
+        

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<head>
+  <title> Home </title>
+</head>
+<body>
+
+  <h1> Courses list </h1>
+  <h1><a href="/">Go to Students</a></h1>
+
+  {% if flag %}
+  <table id = "all-courses">
+    <tr>
+      <th>SNo</th>
+      <th>Course Code</th>
+      <th>Course Name</th>
+      <th>Course Description</th>
+      <th>Actions</th>
+    </tr>
+    {% for course in courses %}
+    <tr>
+      <td> {{ loop.index }} </td>
+      <td><a href="/course/{{ course.course_id }}/"> {{ course.course_code }} </a></td>
+      <td> {{ course.course_name }} </td>
+      <td> {{ course.course_description }} </td>
+      <td>
+        <a href="/course/{{ course.course_id }}/update/" type="button">Update</a>
+        <a href="/course/{{ course.course_id }}/delete/" type="button">Delete</a>
+      </td>
+    </tr>
+    {% endfor %}
+  </table>
+
+  {% else %}
+  <p> No course found. Add the courses now! </p>
+  {% endif %}
+
+  <a href="/course/create" style="position:relative; left:120px"> +Add Course </a>
+</body>
+</html>
